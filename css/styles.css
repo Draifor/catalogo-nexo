@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+* {
+    margin:0;
+    padding:0;
+}
+/** Generales */
+div.contenedor {
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+ul {
+    list-style: none;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+nav.nav-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nav-header ul li {
+    height: 50px;
+    width: fit-content;
+    padding: 10px;
+    background-color: aqua;
+}
+nav.nav-header ul li:hover {
+    background-color: linear-gradient(to bottom, transparent, #090);
+    background-color: #090;
+    transform: scale(.9);
+    cursor: pointer;
+}
