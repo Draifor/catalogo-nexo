@@ -10,13 +10,19 @@ html {
 }
 /** Generales */
 
-div.contenedor {
+div.main-container {
     background-color: whitesmoke;
     height: 100vh;
-    width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     grid-template-rows: 75px 1fr 50px;
+    grid-template-columns: 100vw;
+    justify-content: center;
+}
+.container {
+    width: 90%;
+    max-width: 1000px;
+    justify-self: center;
 }
 ul {
     list-style: none;
@@ -24,9 +30,12 @@ ul {
 /** Header */
 
 header {
-    width: 100%;
     background-color: #888;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+header div.container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -55,15 +64,34 @@ main {
     padding: 20px;
 }
 ul.catalogo-general {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
-ul.catalogo-general li {
-    display: flex;
-    flex-flow: wrap column;
-    align-items: center;
-
+ul.catalogo-general div {
+    position: relative;
+    overflow: hidden;
+}
+ul.catalogo-general li img {
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+ul.catalogo-general div:hover img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    transform: scale(1.1);
+}
+ul.catalogo-general li p {
+    width: 100%;
+    background-color: #0003;
+    text-align: center;
+    position: absolute;
+    bottom: 43%;
+    left: 0;
+    padding: 15px 0;
+    font-size: 24px;
+    color: #e0e0e0;
+    letter-spacing: .4em;
 }
 /** Footer */
 footer {
@@ -72,4 +100,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+footer p {
+    text-align: center;
 }
