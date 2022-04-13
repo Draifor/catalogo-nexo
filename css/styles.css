@@ -49,6 +49,7 @@ nav.nav-header ul {
     height: 50px;
     width: fit-content;
     padding: 10px;
+    text-transform: uppercase;
     background-color: aqua;
     transition: all .5s ease-out;
 }
@@ -60,6 +61,8 @@ nav.nav-header ul li:hover {
 }
 
 /** Main */
+/** Catálogo */
+
 main {
     padding: 20px;
 }
@@ -74,7 +77,7 @@ ul.catalogo-general div {
 }
 ul.catalogo-general li img {
     width: 100%;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 ul.catalogo-general div:hover img {
     -webkit-filter: blur(3px);
@@ -92,6 +95,13 @@ ul.catalogo-general li p {
     font-size: 24px;
     color: #e0e0e0;
     letter-spacing: .4em;
+    text-transform: uppercase;
+}
+
+/** Recomendados */
+
+h2 {
+    text-transform: uppercase;
 }
 /** Footer */
 footer {
